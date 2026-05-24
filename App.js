@@ -24,21 +24,24 @@ export default function App() {
                 <Button title={isVisible ? "Hide" : "Show"}
                     onPress={() => setIsVisible(state => !state)} />
             </View>
-            <Button title="Increment Counter"
-                onPress={onPressIncrement}
-            />
-            <ImageBackground
-                source={image}
-                style={styles.image}
-                imageStyle={{ opacity: 0.5 }}
-            >
-                <Text style={{ color: 'white', fontSize: 14, textAlign: 'center' }}>
-                    {`Counter: ${count}`}
-                </Text>
-            </ImageBackground>
-            <Button title="Decrement Counter"
-                onPress={onPressDecrement}
-            />
+            <View style={styles.container}>
+                <Button title="Increment Counter"
+                    onPress={onPressIncrement}
+                />
+                <ImageBackground
+                    source={image}
+                    style={styles.image}
+                    imageStyle={{ opacity: 0.5 }}
+                >
+                    <Text style={{ color: 'white', fontSize: 14, textAlign: 'center' }}>
+                        {`Counter: ${count}`}
+                    </Text>
+                </ImageBackground>
+                <Button title="Decrement Counter"
+                    onPress={onPressDecrement}
+                />
+            </View>
+
             <Text style={{ color: 'black', fontSize: 14, textAlign: 'center', marginTop: 50 }}>
                 Welcome to React Native!
             </Text>
@@ -59,6 +62,6 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
         justifyContent: 'center',
         width: '100%',
-        height: 200,
+        height: 300,
     },
 });
